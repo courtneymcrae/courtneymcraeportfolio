@@ -1,4 +1,3 @@
-
  //------- MAGNIFICENT POPUP ---//
 
       $(document).ready(function() {
@@ -51,101 +50,62 @@
 
 
 
-
-window.jQuery = window.$ = jQuery;
 //------- SITE LOADER ---//
 
 jQuery(window).load(function() { 
-    jQuery(".spinner").fadeOut(); 
-    jQuery(".loading-mask").delay(400).fadeOut("slow"); 
+    jQuery("#loaderInner").fadeOut(); 
+    jQuery("#loader").delay(400).fadeOut("slow"); 
 
 
 });
 
-/*---- NAV MENU ---- */
+//------- ACTIVE LINKS SCROLLSPY ---//
+
+$('body').scrollspy({ offset: 200, target: '.navigation' });
 
 
-$('.menu-icon').click(function() {
-   $(this).toggleClass('menu-icon-clicked');
-   $('.menu-nav').toggleClass('menu-nav-open');
-  });
+
+// HEADER SCROLL EFFECT
+
+jQuery(document).ready(function($){ 
+    $( window ).scroll(function() {
+      var heights = window.innerHeight;
+      document.getElementById("sectionIntro").style.height = heights * 0.8 + "px";
 
 
-//------- JQUERY ISOTOPE ---//
+    });
 
-$(window).load(function() {
-
-    "use strict";
+});
 
 
-// external js: isotope.pkgd.js, classie.js
+jQuery(document).ready(function($){
+var introSection = $('#sHomeBg'),
+    introSectionHeight = introSection.height(),
 
-// ----- getText helper ----- //
+    //change opacitySpeed if you want to change the speed of opacity reduction effect
+    opacitySpeed = 1.2; 
 
-var textProp = document.documentElement.textContent !== undefined ? 'textContent' : 'innerText';
+triggerAnimation();
+$(window).on('resize', function(){
+    triggerAnimation();
+});
 
-function getText( elem ) {
-  return elem[ textProp ];
+//bind the scale event to window scroll if window width > $MQ (unbind it otherwise)
+function triggerAnimation(){
+        $(window).on('scroll', function(){
+            //The window.requestAnimationFrame() method tells the browser that you wish to perform an animation- the browser can optimize it so animations will be smoother
+            window.requestAnimationFrame(animateIntro);
+        });
+}
+//assign a scale transformation to the introSection element and reduce its opacity
+function animateIntro () {
+    var scrollPercentage = ($(window).scrollTop()/introSectionHeight).toFixed(5);
+    //check if the introSection is still visible
+    if( $(window).scrollTop() < introSectionHeight) {
+        introSection.css({
+            'opacity': 1 - scrollPercentage*opacitySpeed
+        });
+    }
 }
 
-// -----  ----- //
-
-docReady( function() {
-  // init Isotope
-  var iso = new Isotope( '#isotopeGrid', {
-    itemSelector: '.itemIso',
-    gutter: 10
-  });
-
-  // filter functions
-  var filterFns = {
-    // show if number is greater than 50
-    numberGreaterThan50: function( itemElem ) {
-      var number = getText( itemElem.querySelector('.number') );
-      return parseInt( number, 10 ) > 50;
-    },
-    // show if name ends with -ium
-    ium: function( itemElem ) {
-      var name = getText( itemElem.querySelector('.name') );
-      return name.match( /ium$/ );
-    }
-  };
-
-  // bind filter button click
-  var filtersElem = document.querySelector('.filters');
-  eventie.bind( filtersElem, 'click', function( event ) {
-    // only work with buttons
-    if ( !matchesSelector( event.target, '.filter' ) ) {
-      return;
-    }
-    var filterValue = event.target.getAttribute('data-filter');
-    // use matching filter function
-    filterValue = filterFns[ filterValue ] || filterValue;
-    iso.arrange({ filter: filterValue });
-  });
-
-  // change is-checked class on buttons
-  var buttonGroups = document.querySelectorAll('.filters-group');
-  for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-    var buttonGroup = buttonGroups[i];
-    radioButtonGroup( buttonGroup );
-  }
-
 });
-
-function radioButtonGroup( buttonGroup ) {
-  eventie.bind( buttonGroup, 'click', function( event ) {
-    // only work with buttons
-    if ( !matchesSelector( event.target, '.filter' ) ) {
-      return;
-    }
-    classie.remove( buttonGroup.querySelector('.is-checked'), 'is-checked' );
-    classie.add( event.target, 'is-checked' );
-  });
-}
-
-
-});
-
-
-
