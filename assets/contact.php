@@ -54,8 +54,8 @@ if ( empty( $comments ) ) {
 //// Place your e-mail here
 
 if ( !empty($error) ) {
-	echo '<div class="error-message">Corect the errors and try again!';
-	echo '<ul class="error-messages nop">' . $error . '</ul>';
+	echo '<div class="errorMessage">Corect the errors and try again!';
+	echo '<ul class="errorMessages">' . $error . '</ul>';
 	echo '</div>';
 
 	return false;
@@ -84,8 +84,8 @@ $headers .= "Reply-To: $email" . PHP_EOL;
 if ( mail( $address, $e_subject, $msg, $headers ) ) {
 
 	echo "<fieldset>";
-	echo "<div class='success-page'>";
-	echo "<h2>Your email was sent!</h2>";
+	echo "<div class='successPage'>";
+	echo "<h1>Your email was sent!</h1>";
 	echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p>";
 	echo "</div>";
 	echo "</fieldset>";
