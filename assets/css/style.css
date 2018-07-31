@@ -416,13 +416,21 @@
 /* group area */
 
 .group-text > h2 {
-    color: #313131;
-    font-family: montserrat;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 45px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+    font-family: 'Petit Formal Script', cursive;
+    color: #000000;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    margin-bottom: 30px;
+    line-height: 50px;
+}
+
+.group-text > h3 {
+    font-family: Open Sans;
+    font-size: 19px;
+    letter-spacing: 2px;
+    font-weight: 500;
+
 }
 .group-text > h2 span.color {
     color: #ff0000;
@@ -1428,6 +1436,9 @@ form#searchbox input::-webkit-placeholder {
     color: #000;
     background-color: #fff;
 
+    padding-right:50%;
+    padding-left:50%;
+
 }
 
 
@@ -1437,29 +1448,47 @@ form#searchbox input::-webkit-placeholder {
     background-color: #fff;
 }
 .minim-1-about {
-    background: rgba(0, 0, 0, 0) url("../../assets/img/banner/2.png") no-repeat scroll 0 82% / 20% auto;
+    /*background: rgba(0, 0, 0, 0) url("../../assets/img/banner/2.png") no-repeat scroll 0 82% / 20% auto;*/
+
 }
+
 .minim-1-about-dec {
-    padding-left: 30px;
+    padding-right:20%;
+    padding-left:20%;
 }
-.minim-1-about-img > img {
+/*.minim-1-about-img > img {
     padding-right: 20px;
     width: 90%;
     position: relative;
     z-index: -1;
-}
+}*/
 .minim-1-about-dec > h2 {
     font-family: 'Petit Formal Script', cursive;
     color: #000000;
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 45px;
+    font-weight: 600;
     letter-spacing: 1px;
-    margin-bottom: 38px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    /*text-transform: uppercase;*/
 }
+
+.minim-1-about-dec > h3 {
+    font-family: Open Sans;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    line-height: 1.1;
+    /*text-transform: uppercase;*/
+    }
+
 .minim-1-about-dec > p {
-    color: #343434;
-    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
     line-height: 25px;
+    letter-spacing: .1px;
     margin: 0;
 }
 .minim-1-about-dec > p.minim1-btn {
@@ -1763,14 +1792,20 @@ form#searchbox input::-webkit-placeholder {
     font-size: 36px;
 }
 .single-service-4 > h3 {
-    color: #363636;
-    font-size: 24px;
+    font-family: open sans;
+    color: #000;
+    font-size: 17px;
+    font-weight: 550;
     letter-spacing: 4px;
     margin: 19px 0 21px;
     text-transform: uppercase;
 }
+
 .single-service-4 > p {
-    color: #343434;
+    color: #000;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
 }
 .single-service-4 {
     padding: 0 10px;
@@ -1901,6 +1936,11 @@ form#searchbox input::-webkit-placeholder {
     display: block;
     letter-spacing: 2px;
     margin-top: 20px;
+}
+
+.section-title-4 > h4 {
+   font-family: open sans;
+   font-size: 17px;
 }
 .cr-header-section {
     background-color: transparent;
