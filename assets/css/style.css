@@ -1465,7 +1465,7 @@ form#searchbox input::-webkit-placeholder {
 .minim-1-about-dec > h2 {
     font-family: 'Petit Formal Script', cursive;
     color: #000000;
-    font-size: 35px;
+    font-size: 37px;
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 30px;
@@ -1475,9 +1475,9 @@ form#searchbox input::-webkit-placeholder {
 
 .minim-1-about-dec > h3 {
     font-family: Open Sans;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 2px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.1;
     /*text-transform: uppercase;*/
     }
@@ -1486,9 +1486,9 @@ form#searchbox input::-webkit-placeholder {
     font-family: 'Roboto', sans-serif;
     color: #000;
     font-size: 15px;
-    font-weight: 600;
-    line-height: 25px;
-    letter-spacing: .1px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 1px;
     margin: 0;
 }
 .minim-1-about-dec > p.minim1-btn {
