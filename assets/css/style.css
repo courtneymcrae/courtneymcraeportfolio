@@ -943,7 +943,7 @@
 }
 .slider-creative-6 > h3 {
     color: #000;
-    font-size: 36px;
+    font-size: 30px;
     letter-spacing: 5px;
     text-transform: uppercase;
     word-spacing: 40px;
@@ -951,9 +951,9 @@
 .slider-creative-6 > h2 {
     color: #000;
     font-family: 'Petit Formal Script', cursive;
-    font-size: 120px;
-    font-weight: 700;
-    letter-spacing: 5px;
+    font-size: 100px;
+    font-weight: 600;
+    letter-spacing: 1px;
     margin: 40px 0 26px;
     /*text-transform: uppercase;*/
 }
@@ -1485,7 +1485,7 @@ form#searchbox input::-webkit-placeholder {
 .minim-1-about-dec > p {
     font-family: 'Roboto', sans-serif;
     color: #000;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 25px;
     letter-spacing: .1px;
